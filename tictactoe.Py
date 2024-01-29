@@ -10,9 +10,9 @@ gameRunning = True
 #print the game board
 def printBoard(board):
     print(board[0] + " | " + board[1] + " | " + board[2])
-    print("__________")
+    print("__|___|___")
     print(board[3] + " | " + board[4] + " | " + board[5])
-    print("__________")
+    print("__|___|___")
     print(board[6] + " | " + board[7] + " | " + board[8])
 #take player input
 def playerInput(board):
@@ -61,10 +61,12 @@ def checkTie (board):
         printBoard(board)
         print("It is a tie")
         gameRunning = False
+        exit()
         
 def checkWin():
     if checkDiag(board) or checkHorizotle(board) or checkRow(board):
         print(f"The winner is {Winner}")
+        exit()
 
         
 #swith the player
